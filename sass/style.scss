@@ -79,7 +79,7 @@ body {
   }
 
   &__image {
-    background: linear-gradient($primary-accent, $primary-accent), url(../dist/images/image-header-desktop.jpg) no-repeat;
+    background: linear-gradient($primary-accent, $primary-accent), url(./images/image-header-desktop.jpg) no-repeat;
     background-size: cover;
     width: 50%;
   }
@@ -122,6 +122,8 @@ body {
     &__image {
       width: 100%;
       height: 250px;
+      background: linear-gradient($primary-accent, $primary-accent), url(./images/image-header-mobile.jpg) no-repeat;
+      background-size: cover;
     }
   }  
 }
