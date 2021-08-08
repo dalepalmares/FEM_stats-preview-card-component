@@ -1,0 +1,127 @@
+$primary-main: hsl(233, 47%, 7%);
+$primary-card: hsl(244, 38%, 16%);
+$primary-accent: rgba(106, 27, 155, 0.6);
+
+$neutral-main: hsl(0, 0%, 100%);
+$neutral-paragraph: hsla(0, 0%, 100%, 0.75);
+$neutral-stat-heading: hsla(0, 0%, 100%, 0.6);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-main;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.card {
+  background-color: $primary-card;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1110px;
+  
+  &__left {
+    width: 50%;
+    padding: 70px;
+    padding-right: 50px;
+    
+    &__headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      color: $neutral-main;
+      
+      &--purple {
+        color: hsl(277, 64%, 61%);
+      }
+    }
+    
+    &__paragraph {
+      font-family: 'Lexend Deca', sans-serif;
+      color: $neutral-paragraph;
+      width: 90%;
+      line-height: 170%;
+      margin-top: 25px;
+    }
+    
+    &__stats {
+      margin-top: 70px;
+      display: flex;
+
+      &__stat {
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        font-weight: 400  ;
+        text-transform: uppercase;
+        color: $neutral-stat-heading;
+        margin-right: 64px;
+        
+        &__heading {
+          display: block;
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
+          letter-spacing: 0;
+          text-transform: none;
+          font-size: 24px;
+          margin-bottom: 8px;
+          color: $neutral-main;
+        }
+      }
+    }
+  }
+
+  &__image {
+    background: linear-gradient($primary-accent, $primary-accent), url(../dist/images/image-header-desktop.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .card {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 330px;
+
+    &__left {
+      width: 100%;
+      padding: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      &__headline {
+        font-size: 28px;
+      }
+
+      &__paragraph {
+        width: 100%;
+      }
+
+      &__stats {
+        margin-top: 40px;
+        flex-direction: column;
+
+        &__stat {
+          margin: 0;
+        }
+      }
+
+      &__stats * + * {
+        margin-top: 30px;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 250px;
+    }
+  }  
+}

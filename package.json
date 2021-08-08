@@ -1,0 +1,16 @@
+{
+  "name": "mine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.37.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "sass --no-source-map --watch ./sass/style.scss:./dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
